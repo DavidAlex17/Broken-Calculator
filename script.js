@@ -44,10 +44,10 @@ class Calculator {
 
     // if NaN for first value or NaN for second value, then return to cancel function
     if (isNaN(firstNumber) || isNaN(secondNumber)) return;
-    if (this.operation === '+') computation = firstNumber + secondNumber;
-    if (this.operation === '-') computation = firstNumber - secondNumber;
-    if (this.operation === 'X') computation = firstNumber * secondNumber;
-    if (this.operation === '%') computation = firstNumber / secondNumber;
+    if (this.operation === '+') computation = firstNumber - secondNumber; // + sign switched to minus sign
+    if (this.operation === '-') computation = firstNumber + secondNumber; // - sign switch to + sign
+    if (this.operation === 'X') computation = firstNumber / secondNumber; // ...
+    if (this.operation === '%') computation = firstNumber * secondNumber; // you get the rest.
     // second operand = result of computation
     this.secondNumber = computation;
     this.operation = undefined;
